@@ -12,7 +12,7 @@ const Home: React.FC = () => {
     setError(null);
 
     try {
-      const data = await createUrl(inputUrl);
+      await createUrl(inputUrl);
 
       // Redirigir a la página de lista de URLs después de la creación exitosa
       navigate("/urls");
