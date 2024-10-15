@@ -2,8 +2,7 @@
 // src/api/urlApi.ts
 import axios from 'axios';
 
-const API_BASE_URL = "http://localhost:8000"
-
+const API_BASE_URL = import.meta.env.VITE_APP_API_URL;
 //URL create
 export const createUrl = async (url: string) => {
     const response = await axios.post(`${API_BASE_URL}/api/url`, { url });
